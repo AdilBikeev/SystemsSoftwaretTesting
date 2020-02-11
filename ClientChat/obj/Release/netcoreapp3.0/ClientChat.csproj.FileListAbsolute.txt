@@ -1,0 +1,16 @@
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\bin\Release\netcoreapp3.0\ClientChat.exe
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\bin\Release\netcoreapp3.0\ClientChat.deps.json
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\bin\Release\netcoreapp3.0\ClientChat.runtimeconfig.json
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\bin\Release\netcoreapp3.0\ClientChat.runtimeconfig.dev.json
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\bin\Release\netcoreapp3.0\ClientChat.dll
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\bin\Release\netcoreapp3.0\ClientChat.pdb
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\obj\Release\netcoreapp3.0\MainWindow.g.cs
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\obj\Release\netcoreapp3.0\App.g.cs
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\obj\Release\netcoreapp3.0\ClientChat_MarkupCompile.cache
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\obj\Release\netcoreapp3.0\ClientChat_MarkupCompile.lref
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\obj\Release\netcoreapp3.0\MainWindow.baml
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\obj\Release\netcoreapp3.0\ClientChat.g.resources
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\obj\Release\netcoreapp3.0\ClientChat.AssemblyInfoInputs.cache
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\obj\Release\netcoreapp3.0\ClientChat.AssemblyInfo.cs
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\obj\Release\netcoreapp3.0\ClientChat.dll
+D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\obj\Release\netcoreapp3.0\ClientChat.pdb

@@ -14,11 +14,11 @@
         <StackPanel>
             <RichTextBox Style="{StaticResource RtbChat}"></RichTextBox>
             <DockPanel>
-                <TextBox  Style="{StaticResource NickNameTb}" Text="Ваш никнейм"></TextBox>
-                <TextBox Style="{StaticResource MessageTb}">Сообщение</TextBox>
-                <Button Style="{StaticResource SendBtn}">
+                <TextBox x:Name="nickNameTb" Style="{StaticResource NickNameTb}" Text="Ваш никнейм"></TextBox>
+                <TextBox x:Name="msgTb" Style="{StaticResource MessageTb}">Сообщение</TextBox>
+                <Button x:Name="sendMsgBtn" Style="{StaticResource SendBtn}" Click="SendMsgBtn_Click">
                     <Button.Background>
-                        <ImageBrush ImageSource="./Content/Конверт.jpg" Stretch="UniformToFill"/>
+                        <ImageBrush Stretch="UniformToFill" ImageSource="./Content/Message.jpg"/>
                     </Button.Background>
                 </Button>
             </DockPanel>

@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClientChat"
         mc:Ignorable="d"
-        Title="Chat" Height="450" Width="800">
+        Title="Chat" Height="450" Width="800"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary Source="./Resource/MainDictionary.xaml"/>
+    </Window.Resources>
     <Grid>
+        <StackPanel>
+            <RichTextBox Style="{StaticResource RtbChat}"></RichTextBox>
+            <DockPanel>
+                <TextBox  Style="{StaticResource NickNameTb}" Text="Ваш никнейм"></TextBox>
+                <TextBox Style="{StaticResource MessageTb}">Сообщение</TextBox>
+                <Button Style="{StaticResource SendBtn}">
+                    <Button.Background>
+                        <ImageBrush ImageSource="./Content/Конверт.jpg" Stretch="UniformToFill"/>
+                    </Button.Background>
+                </Button>
+            </DockPanel>
+        </StackPanel>
 
     </Grid>
 </Window>

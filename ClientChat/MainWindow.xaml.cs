@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,6 +28,7 @@ namespace ClientChat
         {
             InitializeComponent();
             messageController = new MessageController();
+            _ = messageController.RunPeriodicallyAsync(this.UpdateMsg, new TimeSpan(0, 0, 5), CancellationToken.None);
         }
 
         private void SendMsgBtn_Click(object sender, RoutedEventArgs e)
@@ -38,6 +40,18 @@ namespace ClientChat
             }else
             {
                 MessageBox.Show("По техническим причинам сообщение не удалось доставить", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private async Task UpdateMsg()
+        {
+            string res = await messageController.UpdateMessages();
+            if( !string.IsNullOrEmpty(res))
+            {
+                this.msgTb.Text = res;
+            } else
+            {
+                MessageBox.Show("Связь с сервером потеряно", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

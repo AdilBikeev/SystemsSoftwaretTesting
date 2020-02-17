@@ -48,7 +48,8 @@ namespace ClientChat
             string res = await messageController.UpdateMessages();
             if( !string.IsNullOrEmpty(res))
             {
-                this.msgTb.Text = res;
+                TextRange textRange = new TextRange(this.chatRtb.Document.ContentStart, this.chatRtb.Document.ContentEnd);
+                textRange.Text = res;
             } else
             {
                 MessageBox.Show("Связь с сервером потеряно", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);

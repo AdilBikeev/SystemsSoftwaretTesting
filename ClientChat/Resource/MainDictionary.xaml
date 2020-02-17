@@ -3,6 +3,8 @@
                     xmlns:local="clr-namespace:ClientChat.Resource">
     <Style  x:Key="RtbChat">
         <Setter Property="Control.Height" Value="335"/>
+        <Setter Property="Block.LineHeight" Value="1.0"/>
+        <Setter Property="Control.Foreground" Value="Red"/>
     </Style>
 
     <Style  x:Key="SendBtn">

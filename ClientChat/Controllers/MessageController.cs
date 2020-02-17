@@ -63,7 +63,7 @@ namespace ClientChat.Controllers
         {
             JObject data = new JObject
             {
-                ["username"] = from,
+                ["name"] = from,
                 ["message"] = msg
             };
 
@@ -85,7 +85,16 @@ namespace ClientChat.Controllers
             string messages = await HttpHellper.HttpSendAsync($"{ this.url}/api/messages", null, Method.GET, ContentType.JSON);
 
             if (messages != string.Empty)
+            {
+                var allMessages = JArray.Parse(messages);
+                messages = string.Empty;
+
+                foreach (var msg in allMessages)
+                {
+                    messages += $"{msg["name"]}: {msg["message"]}\n"; 
+                }
                 return messages;
+            }
             else
                 return string.Empty;
         }

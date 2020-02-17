@@ -59,21 +59,24 @@ namespace ClientChat.Hellpers.Http
                 WebRequest request = WebRequest.Create(url);
                 request.Method = method; // для отправки используется метод Post
                                          // данные для отправки
+                                         // устанавливаем тип содержимого - параметр ContentType
 
-                // преобразуем данные в массив байтов
-                byte[] byteArray = System.Text.Encoding.UTF8.GetBytes(data.ToString());
-
-                // устанавливаем тип содержимого - параметр ContentType
-                request.ContentType = contentType;
-
-                // Устанавливаем заголовок Content-Length запроса - свойство ContentLength
-                request.ContentLength = byteArray.Length;
-
-                //записываем данные в поток запроса
-                using (Stream dataStream = request.GetRequestStream())
+                if(method == Method.POST)
                 {
-                    dataStream.Write(byteArray, 0, byteArray.Length);
+                    // преобразуем данные в массив байтов
+                    byte[] byteArray = System.Text.Encoding.UTF8.GetBytes(data.ToString());
+
+                    //записываем данные в поток запроса
+                    using (Stream dataStream = request.GetRequestStream())
+                    {
+                        dataStream.Write(byteArray, 0, byteArray.Length);
+                    }
+
+                    // Устанавливаем заголовок Content-Length запроса - свойство ContentLength
+                    request.ContentLength = byteArray.Length;
                 }
+
+                request.ContentType = contentType;
 
                 WebResponse response = await request.GetResponseAsync();
                 using (Stream stream = response.GetResponseStream())

@@ -69,7 +69,7 @@ namespace ClientChat.Controllers
 
             string res = HttpHellper.HttpSend($"{ this.url}/api/messages", data, Method.POST, ContentType.JSON);
 
-            if (res != string.Empty)
+            if (res == string.Empty)
                 return true;
             else
                 return false;

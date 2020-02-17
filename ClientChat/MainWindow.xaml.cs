@@ -28,7 +28,7 @@ namespace ClientChat
         {
             InitializeComponent();
             messageController = new MessageController();
-            _ = messageController.RunPeriodicallyAsync(this.UpdateMsg, new TimeSpan(0, 0, 5), CancellationToken.None);
+            _ = messageController.RunPeriodicallyAsync(this.UpdateMsg, new TimeSpan(0, 0, 0, 0, 300), CancellationToken.None);
         }
 
         private void SendMsgBtn_Click(object sender, RoutedEventArgs e)
@@ -50,9 +50,10 @@ namespace ClientChat
             {
                 TextRange textRange = new TextRange(this.chatRtb.Document.ContentStart, this.chatRtb.Document.ContentEnd);
                 textRange.Text = res;
+                this.Title = "Chat - В сети";
             } else
             {
-                MessageBox.Show("Связь с сервером потеряно", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Title = "Chat - Связь с сервером потеряно";
             }
         }
     }

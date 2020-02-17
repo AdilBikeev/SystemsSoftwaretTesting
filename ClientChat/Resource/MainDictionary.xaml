@@ -9,6 +9,7 @@
 
     <Style  x:Key="SendBtn">
         <Setter Property="Control.Height" Value="80"/>
+        <Setter Property="Control.Cursor" Value="Hand"/>
     </Style>
 
     <Style  x:Key="MessageTb">

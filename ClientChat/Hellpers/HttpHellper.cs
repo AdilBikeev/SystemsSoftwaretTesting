@@ -143,7 +143,7 @@ namespace ClientChat.Hellpers.Http
             }
             catch (Exception exc)
             {
-                //res = exc.Message;
+                res = exc.Message;
             }
 
             return res;

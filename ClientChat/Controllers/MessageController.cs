@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
 using ClientChat.Hellpers;
 using ClientChat.Hellpers.Http;
 using Newtonsoft.Json;
@@ -19,7 +20,25 @@ namespace ClientChat.Controllers
 
         public MessageController ()
         {
-            this.url = "localhost:8080";
+            this.InitConfig();
+        }
+
+        /// <summary>
+        /// Парсит необходимые конфигурационные настройки из xml файла
+        /// </summary>
+        private void InitConfig()
+        {
+            XmlDocument xml = new XmlDocument();
+            xml.Load(@"../../../ConfigureFiles/app-config.xml");
+
+            XmlElement element = xml.DocumentElement;
+
+            var url = element["url"].InnerText;
+
+            if (!string.IsNullOrEmpty(url))
+            {
+                this.url = url;
+            }
         }
 
         public async Task RunPeriodicallyAsync(

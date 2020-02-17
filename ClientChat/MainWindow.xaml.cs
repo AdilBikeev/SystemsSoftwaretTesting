@@ -35,7 +35,6 @@ namespace ClientChat
         {
             if(messageController.SendMessage(this.msgTb.Text, this.nickNameTb.Text))
             {
-                MessageBox.Show("Сообщение успешно доставлено", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
                 this.msgTb.Text = "";
             }else
             {

@@ -15,11 +15,12 @@
             <RichTextBox x:Name="chatRtb" VerticalScrollBarVisibility="Visible" IsReadOnly="True" Style="{StaticResource RtbChat}"></RichTextBox>
             <DockPanel>
                 <TextBox x:Name="nickNameTb" Style="{StaticResource NickNameTb}" Text="Ваш никнейм"></TextBox>
-                <TextBox x:Name="msgTb" Style="{StaticResource MessageTb}">Сообщение</TextBox>
+                <TextBox x:Name="msgTb" KeyDown="msgTb_KeyDown" Style="{StaticResource MessageTb}">Сообщение</TextBox>
                 <Button x:Name="sendMsgBtn" Style="{StaticResource SendBtn}" Click="SendMsgBtn_Click">
                     <Button.Background>
-                        <ImageBrush Stretch="UniformToFill" ImageSource="./Content/Message.jpg"/>
+                        <SolidColorBrush Color="Chocolate"/>
                     </Button.Background>
+                    <TextBlock Foreground="White" FontSize="30">Send</TextBlock>
                 </Button>
             </DockPanel>
         </StackPanel>

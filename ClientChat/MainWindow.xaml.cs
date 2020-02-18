@@ -56,5 +56,13 @@ namespace ClientChat
                 this.Title = "Chat - Подключение к сети ...";
             }
         }
+
+        private void msgTb_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                this.SendMsgBtn_Click(new object(), new RoutedEventArgs());
+            }
+        }
     }
 }

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\obj\Release\netcoreapp3.0\
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\obj\Release\netcoreapp3.0\
 ClientChat
 none
 false
 TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_0
-D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\App.xaml
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\App.xaml
 2516802082
 
 41810485773
-193-442062063
+193-802449907
 MainWindow.xaml;Resource\MainDictionary.xaml;
 
 False

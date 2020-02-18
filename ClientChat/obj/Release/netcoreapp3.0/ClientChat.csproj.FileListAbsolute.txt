@@ -18,3 +18,23 @@ D:\Основная винда\Обучение в МИРЭА\3 курс\6 се�
 D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\obj\Release\netcoreapp3.0\Resource\MainDictionary.baml
 D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\obj\Release\netcoreapp3.0\ClientChat.csproj.CopyComplete
 D:\Основная винда\Обучение в МИРЭА\3 курс\6 семестр\Системы тестирования ПО\SystemsSoftwaretTesting\ClientChat\obj\Release\netcoreapp3.0\ClientChat.csprojAssemblyReference.cache
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\bin\Release\netcoreapp3.0\ClientChat.exe
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\bin\Release\netcoreapp3.0\ClientChat.deps.json
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\bin\Release\netcoreapp3.0\ClientChat.runtimeconfig.json
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\bin\Release\netcoreapp3.0\ClientChat.runtimeconfig.dev.json
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\bin\Release\netcoreapp3.0\ClientChat.dll
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\bin\Release\netcoreapp3.0\ClientChat.pdb
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\bin\Release\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\obj\Release\netcoreapp3.0\ClientChat.csprojAssemblyReference.cache
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\obj\Release\netcoreapp3.0\MainWindow.g.cs
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\obj\Release\netcoreapp3.0\App.g.cs
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\obj\Release\netcoreapp3.0\ClientChat_MarkupCompile.cache
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\obj\Release\netcoreapp3.0\ClientChat_MarkupCompile.lref
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\obj\Release\netcoreapp3.0\MainWindow.baml
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\obj\Release\netcoreapp3.0\Resource\MainDictionary.baml
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\obj\Release\netcoreapp3.0\ClientChat.g.resources
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\obj\Release\netcoreapp3.0\ClientChat.AssemblyInfoInputs.cache
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\obj\Release\netcoreapp3.0\ClientChat.AssemblyInfo.cs
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\obj\Release\netcoreapp3.0\ClientChat.csproj.CopyComplete
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\obj\Release\netcoreapp3.0\ClientChat.dll
+C:\Users\vovse\Source\Repos\SystemsSoftwaretTesting6\ClientChat\obj\Release\netcoreapp3.0\ClientChat.pdb

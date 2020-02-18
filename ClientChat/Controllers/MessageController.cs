@@ -91,7 +91,7 @@ namespace ClientChat.Controllers
 
                 foreach (var msg in allMessages)
                 {
-                    messages += $"{msg["name"]}: {msg["message"]}\n"; 
+                    messages += $"[{msg["sendTime"]}] {msg["name"]}: {msg["message"]}\n"; 
                 }
                 return messages;
             }

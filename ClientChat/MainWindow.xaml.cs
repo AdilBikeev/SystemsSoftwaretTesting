@@ -53,7 +53,7 @@ namespace ClientChat
                 this.Title = "Chat - В сети";
             } else
             {
-                this.Title = "Chat - Связь с сервером потеряно";
+                this.Title = "Chat - Подключение к сети ...";
             }
         }
     }

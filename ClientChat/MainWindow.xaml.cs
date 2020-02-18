@@ -49,6 +49,7 @@ namespace ClientChat
             {
                 TextRange textRange = new TextRange(this.chatRtb.Document.ContentStart, this.chatRtb.Document.ContentEnd);
                 textRange.Text = res;
+                this.chatRtb.ScrollToEnd();
                 this.Title = "Chat - В сети";
             } else
             {

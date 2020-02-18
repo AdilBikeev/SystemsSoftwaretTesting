@@ -12,7 +12,7 @@
     </Window.Resources>
     <Grid>
         <StackPanel>
-            <RichTextBox x:Name="chatRtb" IsReadOnly="True" Style="{StaticResource RtbChat}"></RichTextBox>
+            <RichTextBox x:Name="chatRtb" VerticalScrollBarVisibility="Visible" IsReadOnly="True" Style="{StaticResource RtbChat}"></RichTextBox>
             <DockPanel>
                 <TextBox x:Name="nickNameTb" Style="{StaticResource NickNameTb}" Text="Ваш никнейм"></TextBox>
                 <TextBox x:Name="msgTb" Style="{StaticResource MessageTb}">Сообщение</TextBox>

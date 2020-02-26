@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:ClientChat"
         mc:Ignorable="d"
         Title="Chat - Подключение к сети ..." Height="450" Width="800"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize" 
+        Icon="./Content/StatusChat/bad.png">
     <Window.Resources>
         <ResourceDictionary Source="./Resource/MainDictionary.xaml"/>
     </Window.Resources>

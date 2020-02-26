@@ -44,16 +44,26 @@ namespace ClientChat
 
         private async Task UpdateMsg()
         {
-            string res = await messageController.UpdateMessages();
-            if( !string.IsNullOrEmpty(res))
+            try
             {
-                TextRange textRange = new TextRange(this.chatRtb.Document.ContentStart, this.chatRtb.Document.ContentEnd);
-                textRange.Text = res;
-                this.chatRtb.ScrollToEnd();
-                this.Title = "Chat - В сети";
-            } else
+                string res = await messageController.UpdateMessages();
+                if (!string.IsNullOrEmpty(res))
+                {
+                    TextRange textRange = new TextRange(this.chatRtb.Document.ContentStart, this.chatRtb.Document.ContentEnd);
+                    textRange.Text = res;
+                    this.chatRtb.ScrollToEnd();
+                    this.Title = "Chat - В сети";
+                    this.Icon = new BitmapImage(new Uri(@"./../../../Content/StatusChat/online.jpg", UriKind.RelativeOrAbsolute));
+                }
+                else
+                {
+                    this.Title = "Chat - Подключение к сети ...";
+                    this.Icon = new BitmapImage(new Uri(@"./../../../Content/StatusChat/faild.jpg", UriKind.RelativeOrAbsolute));
+                }
+            }
+            catch (Exception exc)
             {
-                this.Title = "Chat - Подключение к сети ...";
+                MessageBox.Show(exc.Message, "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

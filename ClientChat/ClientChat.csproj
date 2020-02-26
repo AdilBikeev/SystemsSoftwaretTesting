@@ -7,7 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Content\bad.icon.png" />
+    <None Remove="Content\bad.png" />
+    <None Remove="Content\faild.icon.jpg" />
+    <None Remove="Content\faild.jpg" />
     <None Remove="Content\Message.jpg" />
+    <None Remove="Content\online.icon.jpg" />
+    <None Remove="Content\online.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,7 +21,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Content\StatusChat\bad.png" />
+    <Resource Include="Content\StatusChat\faild.jpg" />
     <Resource Include="Content\Message.jpg" />
+    <Resource Include="Content\StatusChat\online.jpg" />
   </ItemGroup>
 
 </Project>

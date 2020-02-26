@@ -17,7 +17,7 @@
             <DockPanel>
                 <TextBox x:Name="nickNameTb" Style="{StaticResource NickNameTb}" Text="Ваш никнейм"></TextBox>
                 <TextBox x:Name="msgTb" Style="{StaticResource MessageTb}">Сообщение</TextBox>
-                <Button x:Name="sendMsgBtn" Style="{StaticResource SendBtn}" Click="SendMsgBtn_Click">
+                <Button x:Name="sendMsgBtn" Style="{StaticResource SendBtn}" IsDefault="True" Click="SendMsgBtn_Click">
                     <Button.Background>
                         <ImageBrush Stretch="UniformToFill" ImageSource="./Content/Message.jpg"/>
                     </Button.Background>

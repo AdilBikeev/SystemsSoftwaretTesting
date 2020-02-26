@@ -7,9 +7,19 @@
         <Setter Property="Control.Foreground" Value="Red"/>
     </Style>
 
-    <Style  x:Key="SendBtn">
+    <Style  x:Key="SendBtn" TargetType="Button">
         <Setter Property="Control.Height" Value="80"/>
         <Setter Property="Control.Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <Style  x:Key="MessageTb">
@@ -24,4 +34,5 @@
         <Setter Property="Control.HorizontalAlignment" Value="Center"></Setter>
         <Setter Property="Control.HorizontalContentAlignment" Value="Center"></Setter>
     </Style>
+    
 </ResourceDictionary>

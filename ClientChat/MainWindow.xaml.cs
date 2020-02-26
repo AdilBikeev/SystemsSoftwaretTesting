@@ -33,12 +33,26 @@ namespace ClientChat
 
         private void SendMsgBtn_Click(object sender, RoutedEventArgs e)
         {
-            if(messageController.SendMessage(this.msgTb.Text, this.nickNameTb.Text))
+            if(this.nickNameTb.Text != string.Empty)
             {
-                this.msgTb.Text = "";
-            }else
+                if(this.msgTb.Text != string.Empty)
+                {
+                    if(messageController.SendMessage(this.msgTb.Text, this.nickNameTb.Text))
+                    {
+                        this.msgTb.Text = "";
+                    }else
+                    {
+                        MessageBox.Show("По техническим причинам сообщение не удалось доставить", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Тело сообщения не должно быть пустым", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
             {
-                MessageBox.Show("По техническим причинам сообщение не удалось доставить", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Укажите свой 'Никнейм'", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

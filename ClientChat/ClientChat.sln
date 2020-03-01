@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29230.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientChat", "ClientChat.csproj", "{3A4DF896-E601-4FAB-99B2-78CFD5DBA362}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClientChat", "ClientChat.csproj", "{3A4DF896-E601-4FAB-99B2-78CFD5DBA362}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1BCD0ECD-0C53-4E2D-B0CD-F72D3C47052D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controllers", "Controllers", "{D292E269-335D-41DA-82EA-D2E82913471D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageControllerTest", "..\MessageTest\MessageControllerTest.csproj", "{9AEE6F2A-C548-40F4-9E54-48EEFB07A71B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,17 @@ Global
 		{3A4DF896-E601-4FAB-99B2-78CFD5DBA362}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A4DF896-E601-4FAB-99B2-78CFD5DBA362}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A4DF896-E601-4FAB-99B2-78CFD5DBA362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AEE6F2A-C548-40F4-9E54-48EEFB07A71B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AEE6F2A-C548-40F4-9E54-48EEFB07A71B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AEE6F2A-C548-40F4-9E54-48EEFB07A71B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AEE6F2A-C548-40F4-9E54-48EEFB07A71B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D292E269-335D-41DA-82EA-D2E82913471D} = {1BCD0ECD-0C53-4E2D-B0CD-F72D3C47052D}
+		{9AEE6F2A-C548-40F4-9E54-48EEFB07A71B} = {D292E269-335D-41DA-82EA-D2E82913471D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C96276F9-BFDB-47D5-8053-CE0DFE3DBAA3}

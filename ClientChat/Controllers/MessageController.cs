@@ -11,7 +11,7 @@ using Newtonsoft.Json.Linq;
 
 namespace ClientChat.Controllers
 {
-    class MessageController
+    public class MessageController
     {
         /// <summary>
         /// Url адрес севрера
@@ -29,7 +29,7 @@ namespace ClientChat.Controllers
         private void InitConfig()
         {
             XmlDocument xml = new XmlDocument();
-            xml.Load(@"../../../ConfigureFiles/app-config.xml");
+            xml.Load(@"../../../../ConfigureFiles/app-config.xml");
 
             XmlElement element = xml.DocumentElement;
 

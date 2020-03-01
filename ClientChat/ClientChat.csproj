@@ -6,6 +6,10 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\Debug\netcoreapp3.0\</OutputPath>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="Content\bad.icon.png" />
     <None Remove="Content\bad.png" />

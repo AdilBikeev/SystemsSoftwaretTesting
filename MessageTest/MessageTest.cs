@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ClientChat.Controllers;
 using System;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Tests.Controllers.MessageTest
 {
@@ -43,7 +44,25 @@ namespace Tests.Controllers.MessageTest
         {
             try
             {
+                Thread.Sleep(timeSleep * 1000);
                 _ = await messageController.UpdateMessages();
+            }
+            catch (Exception)
+            {
+                Assert.Fail();
+            }
+        }
+
+        [TestMethod]
+        [Description("Проверка наличия файла конфигурации для MessageController")]
+        [DataRow(1)]
+        [DataRow(60)]
+        public void InitConfig(int timeSleep)
+        {
+            try
+            {
+                Thread.Sleep(timeSleep * 1000);
+                messageController.InitConfig();
             }
             catch (Exception)
             {

@@ -30,7 +30,7 @@ namespace ClientChat.Controllers
         /// <summary>
         /// Парсит необходимые конфигурационные настройки из xml файла
         /// </summary>
-        private void InitConfig()
+        public void InitConfig()
         {
             XmlDocument xml = new XmlDocument();
             xml.Load(this.pathConfig);

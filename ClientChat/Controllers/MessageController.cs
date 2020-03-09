@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Xml;
 using ClientChat.Hellpers;
 using ClientChat.Hellpers.Http;
@@ -18,6 +20,8 @@ namespace ClientChat.Controllers
         /// </summary>
         private string url;
 
+        private readonly string pathConfig = Path.Combine(Directory.GetCurrentDirectory(), "ConfigureFiles", "app-config.xml");
+
         public MessageController ()
         {
             this.InitConfig();
@@ -29,7 +33,7 @@ namespace ClientChat.Controllers
         private void InitConfig()
         {
             XmlDocument xml = new XmlDocument();
-            xml.Load(@"../../../../ConfigureFiles/app-config.xml");
+            xml.Load(this.pathConfig);
 
             XmlElement element = xml.DocumentElement;
 

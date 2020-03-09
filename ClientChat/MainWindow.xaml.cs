@@ -47,15 +47,24 @@ namespace ClientChat
         public MainWindow()
         {
             InitializeComponent();
-            messageController = new MessageController();
-            _ = messageController.RunPeriodicallyAsync(this.UpdateMsg, new TimeSpan(0, 0, 0, 0, 300), CancellationToken.None);
 
-            statusImagesPath = new Dictionary<StatusChat, string>()
+            try
             {
-                [StatusChat.Online] = Path.Combine(this.currentPath, "online.jpg"),
-                [StatusChat.Bad] = Path.Combine(this.currentPath, "bad.jpg"),
-                [StatusChat.Failed] = Path.Combine(this.currentPath, "failed.jpg"),
-            };
+                 messageController = new MessageController();
+                _ = messageController.RunPeriodicallyAsync(this.UpdateMsg, new TimeSpan(0, 0, 0, 0, 300), CancellationToken.None);
+
+                statusImagesPath = new Dictionary<StatusChat, string>()
+                {
+                    [StatusChat.Online] = Path.Combine(this.currentPath, "online.jpg"),
+                    [StatusChat.Bad] = Path.Combine(this.currentPath, "bad.jpg"),
+                    [StatusChat.Failed] = Path.Combine(this.currentPath, "failed.jpg"),
+                };
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show($"Open Application exception\n\n{exc.Message}", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
+                this.Close();
+            }
         }
 
         private void SendMsgBtn_Click(object sender, RoutedEventArgs e)

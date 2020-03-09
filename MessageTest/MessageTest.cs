@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ClientChat.Controllers;
 using System;
+using System.Threading.Tasks;
 
 namespace Tests.Controllers.MessageTest
 {
@@ -30,6 +31,24 @@ namespace Tests.Controllers.MessageTest
         public void SendMessage(string msg, string from)
         {
             Assert.IsInstanceOfType(messageController.SendMessage(msg, from), typeof(Boolean));
+        }
+
+        [TestMethod]
+        [Description("“естирование получени€ сообщений со стороны сервера - провер€ем, что не выпадают исключени€")]
+        [DataRow(1)]
+        [DataRow(5)]
+        [DataRow(30)]
+        [DataRow(60)]
+        public async Task UpdateMessageAsync(int timeSleep)
+        {
+            try
+            {
+                _ = await messageController.UpdateMessages();
+            }
+            catch (Exception)
+            {
+                Assert.Fail();
+            }
         }
     }
 }

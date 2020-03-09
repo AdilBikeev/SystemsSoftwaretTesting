@@ -26,7 +26,7 @@
 
   <ItemGroup>
     <Resource Include="Content\StatusChat\bad.png" />
-    <Resource Include="Content\StatusChat\faild.jpg" />
+    <Resource Include="Content\StatusChat\failed.jpg" />
     <Resource Include="Content\Message.jpg" />
     <Resource Include="Content\StatusChat\online.jpg" />
   </ItemGroup>

@@ -2,3 +2,7 @@
 /ClientChat/obj/Debug
 /ClientChat/.vs
 /MessageTest/bin
+/ClientChat/obj/project.nuget.cache
+/MessageTest/obj/Debug/netcoreapp3.0/MessageControllerTest.csproj.CoreCompileInputs.cache
+/MessageTest/obj/Debug/netcoreapp3.0/MessageControllerTest.genruntimeconfig.cache
+/MessageTest/obj/project.nuget.cache

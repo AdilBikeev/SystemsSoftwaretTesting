@@ -44,6 +44,18 @@ namespace ClientChat
 
         private Dictionary<StatusChat, string> statusImagesPath = null;
 
+        public string NICKNAME
+        {
+            get { return this.nickNameTb.Text; }
+            set { this.nickNameTb.Text = value; }
+        }
+
+        public string MESSAGE
+        {
+            get { return this.msgTb.Text; }
+            set { this.msgTb.Text = value; }
+        }
+
         public MainWindow()
         {
             InitializeComponent();

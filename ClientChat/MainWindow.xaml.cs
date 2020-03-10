@@ -26,7 +26,7 @@ namespace ClientChat
     /// </summary>
     public partial class MainWindow : Window
     {
-        private enum StatusChat
+        public enum StatusChat
         {
             [Description("Соединение успешно установлено")]
             Online = 0,
@@ -45,6 +45,11 @@ namespace ClientChat
         private Dictionary<StatusChat, string> statusImagesPath = null;
 
         private Dictionary<StatusChat, string> statusDescription = null;
+
+        public Dictionary<StatusChat, string> STATUS_DESC_PATH 
+        { 
+            get { return this.statusDescription; } 
+        }
 
         public string NICKNAME
         {

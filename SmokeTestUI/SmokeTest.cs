@@ -2,6 +2,7 @@ using ClientChat;
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading;
+using System.Linq;
 
 namespace SmokeTestUI
 {
@@ -118,6 +119,39 @@ namespace SmokeTestUI
             if (!status)
             {
                 Assert.Fail("Не удалось открыть окно");
+            }
+        }
+
+        [TestMethod]
+        [Description("Проверка соответсвия title приложения с доступным именем из словаря")]
+        public void CheckStatus()
+        {
+            Thread thread = new Thread(() =>
+            {
+                lock (locker)
+                {
+                    MainWindow main = new MainWindow();
+                    try
+                    {
+                        main.Show();
+
+                        if (main.STATUS_DESC_PATH.Values.FirstOrDefault(x => x == main.Title) != null) status = true;
+
+                        main.Close();
+                    }
+                    catch (InvalidOperationException)
+                    {
+                        status = false;
+                    }
+                }
+            });
+
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            thread.Join();
+            if (!status)
+            {
+                Assert.Fail("Title имеет недопустимое значение");
             }
         }
     }

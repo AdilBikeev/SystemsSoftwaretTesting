@@ -44,6 +44,8 @@ namespace ClientChat
 
         private Dictionary<StatusChat, string> statusImagesPath = null;
 
+        private Dictionary<StatusChat, string> statusDescription = null;
+
         public string NICKNAME
         {
             get { return this.nickNameTb.Text; }
@@ -65,18 +67,33 @@ namespace ClientChat
                  messageController = new MessageController();
                 _ = messageController.RunPeriodicallyAsync(this.UpdateMsg, new TimeSpan(0, 0, 0, 0, 300), CancellationToken.None);
 
-                statusImagesPath = new Dictionary<StatusChat, string>()
-                {
-                    [StatusChat.Online] = Path.Combine(this.currentPath, "online.jpg"),
-                    [StatusChat.Bad] = Path.Combine(this.currentPath, "bad.jpg"),
-                    [StatusChat.Failed] = Path.Combine(this.currentPath, "failed.jpg"),
-                };
+                Init();
             }
             catch (Exception exc)
             {
                 MessageBox.Show($"Open Application exception\n\n{exc.Message}", "ERROR", MessageBoxButton.OK, MessageBoxImage.Error);
                 this.Close();
             }
+        }
+
+        public void Init()
+        {
+            statusImagesPath = new Dictionary<StatusChat, string>()
+            {
+                [StatusChat.Online] = Path.Combine(this.currentPath, "online.jpg"),
+                [StatusChat.Bad] = Path.Combine(this.currentPath, "bad.jpg"),
+                [StatusChat.Failed] = Path.Combine(this.currentPath, "failed.jpg"),
+            };
+
+            statusDescription = new Dictionary<StatusChat, string>()
+            {
+                [StatusChat.Online] = "Chat - В сети",
+                [StatusChat.Bad] = "Chat - Подключение к сети ...",
+                [StatusChat.Failed] = "Chat - Не в сети",
+            };
+
+            this.Title = statusDescription[StatusChat.Failed];
+            this.Icon = new BitmapImage(new Uri(statusImagesPath[StatusChat.Failed], UriKind.RelativeOrAbsolute));
         }
 
         private void SendMsgBtn_Click(object sender, RoutedEventArgs e)
@@ -114,13 +131,13 @@ namespace ClientChat
                     TextRange textRange = new TextRange(this.chatRtb.Document.ContentStart, this.chatRtb.Document.ContentEnd);
                     textRange.Text = res;
                     this.chatRtb.ScrollToEnd();
-                    this.Title = "Chat - В сети";
+                    this.Title = statusDescription[StatusChat.Online];
                     this.Icon = new BitmapImage(new Uri(statusImagesPath[StatusChat.Online], UriKind.RelativeOrAbsolute));
                 }
                 else
                 {
-                    this.Title = "Chat - Подключение к сети ...";
-                    this.Icon = new BitmapImage(new Uri(statusImagesPath[StatusChat.Failed], UriKind.RelativeOrAbsolute));
+                    this.Title = statusDescription[StatusChat.Bad];
+                    this.Icon = new BitmapImage(new Uri(statusImagesPath[StatusChat.Bad], UriKind.RelativeOrAbsolute));
                 }
             }
             catch (Exception exc)
